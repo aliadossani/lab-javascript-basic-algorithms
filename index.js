@@ -2,7 +2,7 @@
 let hacker1 = "Alia";
 console.log(`The driver's name is ${hacker1}`);
 
-let hacker2 = "Carina";
+let hacker2 = "Alia";
 console.log(`The navigator's name is ${hacker2}`);
 
 // Iteration 2: Conditionals
@@ -53,15 +53,16 @@ console.log(newNavigatorString);
 //using for loop
 for (let i = 0; i <= Math.min(hacker1.length - 1, hacker2.length - 1); i++) {
 
-    if (hacker1[i] === hacker2[i]) {
-        console.log("What?! You both have the same name?");
+    if (i === Math.min(hacker1.length - 1, hacker2.length - 1)) {
+        if (hacker1 === hacker2) {
+            console.log("What?! You both have the same name?");
+        }
+    } else if (hacker1[i] === hacker2[i]) {
         continue;
-    }
-    else if (hacker1[i] < hacker2[i]) {
+    } else if (hacker1[i] < hacker2[i]) {
         console.log("The driver's name goes first.")
         break;
-    }
-    else if (hacker1[i] > hacker2[i]) {
+    } else if (hacker1[i] > hacker2[i]) {
         console.log("Yo, the navigator goes first, definitely.");
         break;
     }
