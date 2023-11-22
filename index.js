@@ -39,13 +39,33 @@ for (let i = hacker2.length - 1; i >= 0; i--) {
 console.log(newNavigatorString);
 
 //3.3
-if (hacker1 === hacker2) {
-    console.log("What?! You both have the same name?")
+//using conditions
+// if(hacker1===hacker2){
+//     console.log("What?! You both have the same name?")
+//   }
+// else if(hacker1<hacker2){
+//     console.log("The driver's name goes first.");
+// }
+//  else{
+//     console.log("Yo, the navigator goes first, definitely.");
+//  }
+
+//using for loop
+for (let i = 0; i <= Math.min(hacker1.length - 1, hacker2.length - 1); i++) {
+
+    if (hacker1[i] === hacker2[i]) {
+        console.log("What?! You both have the same name?");
+        continue;
+    }
+    else if (hacker1[i] < hacker2[i]) {
+        console.log("The driver's name goes first.")
+        break;
+    }
+    else if (hacker1[i] > hacker2[i]) {
+        console.log("Yo, the navigator goes first, definitely.");
+        break;
+    }
+
 }
-else if (hacker1 < hacker2) {
-    console.log("The driver's name goes first.");
-}
-else {
-    console.log("Yo, the navigator goes first, definitely.");
-}
+
 
