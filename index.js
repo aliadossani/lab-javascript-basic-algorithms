@@ -20,7 +20,7 @@ else {
 }
 
 // Iteration 3: Loops
-//3.1
+//3.1 Display the name with a space in between the letters
 //Capitalize the driver's name
 let driverCapitalized = hacker1.toUpperCase();
 let newDriverString = "";
@@ -31,7 +31,7 @@ for (let i = 0; i <= driverCapitalized.length - 1; i += 1) {
 }
 console.log(newDriverString);
 
-//3.2
+//3.2- return reverse of a string
 let newNavigatorString = "";
 for (let i = hacker2.length - 1; i >= 0; i--) {
     newNavigatorString = newNavigatorString + hacker2[i];
@@ -39,5 +39,13 @@ for (let i = hacker2.length - 1; i >= 0; i--) {
 console.log(newNavigatorString);
 
 //3.3
-
+if (hacker1 === hacker2) {
+    console.log("What?! You both have the same name?")
+}
+else if (hacker1 < hacker2) {
+    console.log("The driver's name goes first.");
+}
+else {
+    console.log("Yo, the navigator goes first, definitely.");
+}
 
